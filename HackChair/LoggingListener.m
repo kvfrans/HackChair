@@ -57,8 +57,8 @@
         if (packet.blink)
         {
             NSLog(@"blink");
-            int currentblinks = [[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"];
-            [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:currentblinks] forKey:@"blinks"];
+            int currentblinks = [[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] intValue];
+            [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:currentblinks+1] forKey:@"blinks"];
         }
         self.lastBlink = packet.blink;
     }

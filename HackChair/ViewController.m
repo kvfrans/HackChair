@@ -67,6 +67,12 @@
     
     
 //    [[NSUserDefaults standardUserDefaults] setInteger:[[NSUserDefaults standardUserDefaults] integerForKey:@"snap"]+1 forKey:@"snap"];
+    NSLog(@"%d",[[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] intValue]);
+    
+    if()
+    
+    [[NSUserDefaults standardUserDefaults] setObject:0 forKey:@"blinks"];
+    
     
     AVCaptureConnection *videoConnection = nil;
     for (AVCaptureConnection *connection in stillImageOutput.connections)
