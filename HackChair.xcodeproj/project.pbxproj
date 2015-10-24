@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A97CAB01BDBF37F00491E19 /* libMuse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A97CAAF1BDBF37F00491E19 /* libMuse.a */; settings = {ASSET_TAGS = (); ATTRIBUTES = (Required, ); }; };
+		0A97CAB01BDBF37F00491E19 /* libMuse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A97CAAF1BDBF37F00491E19 /* libMuse.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		0AA17E3C1BDBC46C0066B4EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17E3B1BDBC46C0066B4EE /* main.m */; };
 		0AA17E3F1BDBC46C0066B4EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17E3E1BDBC46C0066B4EE /* AppDelegate.m */; };
 		0AA17E421BDBC46C0066B4EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17E411BDBC46C0066B4EE /* ViewController.m */; };
@@ -16,7 +16,7 @@
 		0AA17E4A1BDBC46C0066B4EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA17E481BDBC46C0066B4EE /* LaunchScreen.storyboard */; };
 		0AA17E551BDBC46C0066B4EE /* HackChairTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17E541BDBC46C0066B4EE /* HackChairTests.m */; };
 		0AA17E601BDBC46C0066B4EE /* HackChairUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17E5F1BDBC46C0066B4EE /* HackChairUITests.m */; };
-		0AD4A12E1BDC008100467F3A /* LoggingListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD4A12D1BDC008100467F3A /* LoggingListener.m */; settings = {ASSET_TAGS = (); }; };
+		0AD4A12E1BDC008100467F3A /* LoggingListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD4A12D1BDC008100467F3A /* LoggingListener.m */; };
 		E18C6FE6F368D8DD3AAE7CB9 /* libPods-HackChair.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A4625699125AC2C121D740 /* libPods-HackChair.a */; };
 /* End PBXBuildFile section */
 
@@ -255,6 +255,7 @@
 				0AA17E341BDBC46C0066B4EE /* Frameworks */,
 				0AA17E351BDBC46C0066B4EE /* Resources */,
 				5BCB17CC2760B8403810E3C5 /* Copy Pods Resources */,
+				EAC1496D300FEEA66AD4E6FE /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,6 +400,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EAC1496D300FEEA66AD4E6FE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackChair/Pods-HackChair-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

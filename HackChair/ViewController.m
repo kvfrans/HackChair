@@ -70,7 +70,7 @@
 //    [[NSUserDefaults standardUserDefaults] setInteger:[[NSUserDefaults standardUserDefaults] integerForKey:@"snap"]+1 forKey:@"snap"];
     NSLog(@"%d",[[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] intValue]);
     
-    if(angle > 30)
+    if(angle > 15)
     {
         if([[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] intValue])
         {
