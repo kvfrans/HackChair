@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A97CAB01BDBF37F00491E19 /* libMuse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A97CAAF1BDBF37F00491E19 /* libMuse.a */; settings = {ASSET_TAGS = (); }; };
+		0A97CAB01BDBF37F00491E19 /* libMuse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A97CAAF1BDBF37F00491E19 /* libMuse.a */; settings = {ASSET_TAGS = (); ATTRIBUTES = (Required, ); }; };
 		0AA17E3C1BDBC46C0066B4EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17E3B1BDBC46C0066B4EE /* main.m */; };
 		0AA17E3F1BDBC46C0066B4EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17E3E1BDBC46C0066B4EE /* AppDelegate.m */; };
 		0AA17E421BDBC46C0066B4EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17E411BDBC46C0066B4EE /* ViewController.m */; };
@@ -54,6 +54,37 @@
 		0AA17E5B1BDBC46C0066B4EE /* HackChairUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackChairUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA17E5F1BDBC46C0066B4EE /* HackChairUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HackChairUITests.m; sourceTree = "<group>"; };
 		0AA17E611BDBC46C0066B4EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AD4A10C1BDBFC0500467F3A /* EAAccessory+IXNAccessoryMuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EAAccessory+IXNAccessoryMuse.h"; sourceTree = "<group>"; };
+		0AD4A10D1BDBFC0500467F3A /* IXNAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNAccelerometer.h; sourceTree = "<group>"; };
+		0AD4A10E1BDBFC0500467F3A /* IXNAnnotationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNAnnotationData.h; sourceTree = "<group>"; };
+		0AD4A10F1BDBFC0500467F3A /* IXNAnnotationFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNAnnotationFormat.h; sourceTree = "<group>"; };
+		0AD4A1101BDBFC0500467F3A /* IXNBattery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNBattery.h; sourceTree = "<group>"; };
+		0AD4A1111BDBFC0500467F3A /* IXNComputingDeviceConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNComputingDeviceConfiguration.h; sourceTree = "<group>"; };
+		0AD4A1121BDBFC0500467F3A /* IXNConnectionState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNConnectionState.h; sourceTree = "<group>"; };
+		0AD4A1131BDBFC0500467F3A /* IXNDrlRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNDrlRef.h; sourceTree = "<group>"; };
+		0AD4A1141BDBFC0500467F3A /* IXNDspData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNDspData.h; sourceTree = "<group>"; };
+		0AD4A1151BDBFC0500467F3A /* IXNEeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNEeg.h; sourceTree = "<group>"; };
+		0AD4A1161BDBFC0500467F3A /* IXNLibMuseVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNLibMuseVersion.h; sourceTree = "<group>"; };
+		0AD4A1171BDBFC0500467F3A /* IXNMessageType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMessageType.h; sourceTree = "<group>"; };
+		0AD4A1181BDBFC0500467F3A /* IXNMuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuse.h; sourceTree = "<group>"; };
+		0AD4A1191BDBFC0500467F3A /* IXNMuseArtifactPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuseArtifactPacket.h; sourceTree = "<group>"; };
+		0AD4A11A1BDBFC0500467F3A /* IXNMuseConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuseConfiguration.h; sourceTree = "<group>"; };
+		0AD4A11B1BDBFC0500467F3A /* IXNMuseConnectionListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuseConnectionListener.h; sourceTree = "<group>"; };
+		0AD4A11C1BDBFC0500467F3A /* IXNMuseConnectionPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuseConnectionPacket.h; sourceTree = "<group>"; };
+		0AD4A11D1BDBFC0500467F3A /* IXNMuseDataListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuseDataListener.h; sourceTree = "<group>"; };
+		0AD4A11E1BDBFC0500467F3A /* IXNMuseDataPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuseDataPacket.h; sourceTree = "<group>"; };
+		0AD4A11F1BDBFC0500467F3A /* IXNMuseDataPacketType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuseDataPacketType.h; sourceTree = "<group>"; };
+		0AD4A1201BDBFC0500467F3A /* IXNMuseFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuseFile.h; sourceTree = "<group>"; };
+		0AD4A1211BDBFC0500467F3A /* IXNMuseFileFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuseFileFactory.h; sourceTree = "<group>"; };
+		0AD4A1221BDBFC0500467F3A /* IXNMuseFileIos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuseFileIos.h; sourceTree = "<group>"; };
+		0AD4A1231BDBFC0500467F3A /* IXNMuseFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuseFileReader.h; sourceTree = "<group>"; };
+		0AD4A1241BDBFC0500467F3A /* IXNMuseFileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuseFileWriter.h; sourceTree = "<group>"; };
+		0AD4A1251BDBFC0500467F3A /* IXNMuseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuseManager.h; sourceTree = "<group>"; };
+		0AD4A1261BDBFC0500467F3A /* IXNMusePreset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMusePreset.h; sourceTree = "<group>"; };
+		0AD4A1271BDBFC0500467F3A /* IXNMuseVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNMuseVersion.h; sourceTree = "<group>"; };
+		0AD4A1281BDBFC0500467F3A /* IXNNotchFrequency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNNotchFrequency.h; sourceTree = "<group>"; };
+		0AD4A1291BDBFC0500467F3A /* IXNSenderInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNSenderInformation.h; sourceTree = "<group>"; };
+		0AD4A12A1BDBFC0500467F3A /* Muse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Muse.h; sourceTree = "<group>"; };
 		1E5513238FE5EE058340A4A1 /* Pods-HackChair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackChair.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackChair/Pods-HackChair.release.xcconfig"; sourceTree = "<group>"; };
 		3AB2395E693496E3BF5827E9 /* Pods-HackChair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackChair.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackChair/Pods-HackChair.debug.xcconfig"; sourceTree = "<group>"; };
 		40A4625699125AC2C121D740 /* libPods-HackChair.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HackChair.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +148,7 @@
 				0AA17E411BDBC46C0066B4EE /* ViewController.m */,
 				0A97CAAF1BDBF37F00491E19 /* libMuse.a */,
 				0AA17E431BDBC46C0066B4EE /* Main.storyboard */,
+				0AD4A10B1BDBFC0500467F3A /* Muse */,
 				0AA17E461BDBC46C0066B4EE /* Assets.xcassets */,
 				0AA17E481BDBC46C0066B4EE /* LaunchScreen.storyboard */,
 				0AA17E4B1BDBC46C0066B4EE /* Info.plist */,
@@ -149,6 +181,44 @@
 				0AA17E611BDBC46C0066B4EE /* Info.plist */,
 			);
 			path = HackChairUITests;
+			sourceTree = "<group>";
+		};
+		0AD4A10B1BDBFC0500467F3A /* Muse */ = {
+			isa = PBXGroup;
+			children = (
+				0AD4A10C1BDBFC0500467F3A /* EAAccessory+IXNAccessoryMuse.h */,
+				0AD4A10D1BDBFC0500467F3A /* IXNAccelerometer.h */,
+				0AD4A10E1BDBFC0500467F3A /* IXNAnnotationData.h */,
+				0AD4A10F1BDBFC0500467F3A /* IXNAnnotationFormat.h */,
+				0AD4A1101BDBFC0500467F3A /* IXNBattery.h */,
+				0AD4A1111BDBFC0500467F3A /* IXNComputingDeviceConfiguration.h */,
+				0AD4A1121BDBFC0500467F3A /* IXNConnectionState.h */,
+				0AD4A1131BDBFC0500467F3A /* IXNDrlRef.h */,
+				0AD4A1141BDBFC0500467F3A /* IXNDspData.h */,
+				0AD4A1151BDBFC0500467F3A /* IXNEeg.h */,
+				0AD4A1161BDBFC0500467F3A /* IXNLibMuseVersion.h */,
+				0AD4A1171BDBFC0500467F3A /* IXNMessageType.h */,
+				0AD4A1181BDBFC0500467F3A /* IXNMuse.h */,
+				0AD4A1191BDBFC0500467F3A /* IXNMuseArtifactPacket.h */,
+				0AD4A11A1BDBFC0500467F3A /* IXNMuseConfiguration.h */,
+				0AD4A11B1BDBFC0500467F3A /* IXNMuseConnectionListener.h */,
+				0AD4A11C1BDBFC0500467F3A /* IXNMuseConnectionPacket.h */,
+				0AD4A11D1BDBFC0500467F3A /* IXNMuseDataListener.h */,
+				0AD4A11E1BDBFC0500467F3A /* IXNMuseDataPacket.h */,
+				0AD4A11F1BDBFC0500467F3A /* IXNMuseDataPacketType.h */,
+				0AD4A1201BDBFC0500467F3A /* IXNMuseFile.h */,
+				0AD4A1211BDBFC0500467F3A /* IXNMuseFileFactory.h */,
+				0AD4A1221BDBFC0500467F3A /* IXNMuseFileIos.h */,
+				0AD4A1231BDBFC0500467F3A /* IXNMuseFileReader.h */,
+				0AD4A1241BDBFC0500467F3A /* IXNMuseFileWriter.h */,
+				0AD4A1251BDBFC0500467F3A /* IXNMuseManager.h */,
+				0AD4A1261BDBFC0500467F3A /* IXNMusePreset.h */,
+				0AD4A1271BDBFC0500467F3A /* IXNMuseVersion.h */,
+				0AD4A1281BDBFC0500467F3A /* IXNNotchFrequency.h */,
+				0AD4A1291BDBFC0500467F3A /* IXNSenderInformation.h */,
+				0AD4A12A1BDBFC0500467F3A /* Muse.h */,
+			);
+			path = Muse;
 			sourceTree = "<group>";
 		};
 		2CF37403B37F5A08428C73B9 /* Pods */ = {
@@ -475,6 +545,7 @@
 			baseConfigurationReference = 3AB2395E693496E3BF5827E9 /* Pods-HackChair.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HackChair/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -484,6 +555,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kevinfrans.HackChair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts";
 			};
 			name = Debug;
 		};
@@ -492,6 +564,7 @@
 			baseConfigurationReference = 1E5513238FE5EE058340A4A1 /* Pods-HackChair.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HackChair/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -501,6 +574,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kevinfrans.HackChair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts";
 			};
 			name = Release;
 		};
