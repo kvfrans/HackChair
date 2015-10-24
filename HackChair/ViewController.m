@@ -25,6 +25,7 @@
     UIButton* capture;
     UILabel* label;
     int count;
+    float angle;
 }
 
 @end
@@ -69,7 +70,13 @@
 //    [[NSUserDefaults standardUserDefaults] setInteger:[[NSUserDefaults standardUserDefaults] integerForKey:@"snap"]+1 forKey:@"snap"];
     NSLog(@"%d",[[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] intValue]);
     
-    if()
+    if(angle > 30)
+    {
+        if([[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] intValue])
+        {
+            [self vibrate];
+        }
+    }
     
     [[NSUserDefaults standardUserDefaults] setObject:0 forKey:@"blinks"];
     
@@ -150,6 +157,7 @@
                      yTotal = yTotal + degs;
                  }
                  NSString *y = [[NSString alloc] initWithFormat:@"%.02f",yTotal];
+                 angle = yTotal;
                  yLabel.text = y;
                  yLabelChange.text = [[NSString alloc] initWithFormat:@"%.02f",degs];
                  [myRootRef setValue:[NSNumber numberWithFloat:yTotal]];
@@ -194,7 +202,7 @@
     
 }
 
-- (void) vibrate(){
+- (void) vibrate {
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
