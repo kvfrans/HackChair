@@ -12,6 +12,7 @@
 #import <Firebase/Firebase.h>
 #import <ImageIO/CGImageProperties.h>
 #import "Muse/Muse.h"
+#import <AudioToolbox/AudioServices.h>
 
 #define _width self.view.frame.size.width
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
@@ -185,6 +186,10 @@
 
 
     
+}
+
+- (void) vibrate(){
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
 
