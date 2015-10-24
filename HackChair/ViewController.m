@@ -68,16 +68,19 @@
     
     
 //    [[NSUserDefaults standardUserDefaults] setInteger:[[NSUserDefaults standardUserDefaults] integerForKey:@"snap"]+1 forKey:@"snap"];
-    NSLog(@"%d",[[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] intValue]);
+    
+    int blinknumber = [[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] intValue];
+    
+    NSLog(@"%d",blinknumber);
     
     if(angle > 30)
     {
-        if([[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] intValue])
+        if(blinknumber >= 2)
         {
             [self vibrate];
         }
     }
-    [[[[Firebase alloc] initWithUrl:@"https://hackchair.firebaseio.com"] childByAppendingPath:@"blinks"] setValue:[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] forKey:@"blinks"];
+    [[[[Firebase alloc] initWithUrl:@"https://hackchair.firebaseio.com"] childByAppendingPath:@"blinks"] setValue:[NSNumber numberWithInt:blinknumber]];
     
     [[NSUserDefaults standardUserDefaults] setObject:0 forKey:@"blinks"];
     

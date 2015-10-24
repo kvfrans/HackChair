@@ -8,12 +8,16 @@
         <title>HackingEdu</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script src="dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
   <script src="jQueryRotate.js"></script>
   <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+  <script src="bootbox.min.js"></script>
   <script src="main.js"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <style>
@@ -92,7 +96,7 @@ body{
 <div id="main">
     <div id="header" align="center">
           <h1>
-            HackingEdu
+            H A C K  C H A I R
           </h1>
         <br/>
 
@@ -110,7 +114,7 @@ body{
     &nbsp;&nbsp;Chair Degree
   </h2>
   <h4>
-  &nbsp;&nbsp;&nbsp;&nbsp;Muse data
+  &nbsp;&nbsp;&nbsp;&nbsp;<span id="degree">Muse data</span>
   </h4>
 </div>
 <div id="section3">
@@ -118,15 +122,15 @@ body{
     &nbsp;&nbsp;Number of Blinks
   </h2>
   <h4>
-  &nbsp;&nbsp;&nbsp;&nbsp;more muse data
+  &nbsp;&nbsp;&nbsp;&nbsp;<span id="blinks">more muse data</span>
   </h4>
   </div>
 <div id="section4">
   <h2>
-    &nbsp;&nbsp;Awake?
+    &nbsp;&nbsp;Sitting?
   </h2>
   <h4>
-  &nbsp;&nbsp;&nbsp;&nbsp;even more dataaa
+  &nbsp;&nbsp;&nbsp;&nbsp;<span id="sitting">even more dataaa</span>
   </h4>
 </body>
 
