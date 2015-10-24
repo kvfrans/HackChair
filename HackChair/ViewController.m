@@ -12,6 +12,7 @@
 #import <Firebase/Firebase.h>
 #import <ImageIO/CGImageProperties.h>
 #import "Muse/Muse.h"
+#import <AudioToolbox/AudioServices.h>
 
 #define _width self.view.frame.size.width
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
@@ -24,6 +25,7 @@
     UIButton* capture;
     UILabel* label;
     int count;
+    float angle;
 }
 
 @end
@@ -66,6 +68,18 @@
     
     
 //    [[NSUserDefaults standardUserDefaults] setInteger:[[NSUserDefaults standardUserDefaults] integerForKey:@"snap"]+1 forKey:@"snap"];
+    NSLog(@"%d",[[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] intValue]);
+    
+    if(angle > 30)
+    {
+        if([[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] intValue])
+        {
+            [self vibrate];
+        }
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setObject:0 forKey:@"blinks"];
+    
     
     AVCaptureConnection *videoConnection = nil;
     for (AVCaptureConnection *connection in stillImageOutput.connections)
@@ -143,6 +157,7 @@
                      yTotal = yTotal + degs;
                  }
                  NSString *y = [[NSString alloc] initWithFormat:@"%.02f",yTotal];
+                 angle = yTotal;
                  yLabel.text = y;
                  yLabelChange.text = [[NSString alloc] initWithFormat:@"%.02f",degs];
                  [myRootRef setValue:[NSNumber numberWithFloat:yTotal]];
@@ -185,6 +200,10 @@
 
 
     
+}
+
+- (void) vibrate{
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
 

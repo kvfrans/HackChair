@@ -7,8 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "Muse/Muse.h"
+#import "LoggingListener.h"
 
 @interface AppDelegate ()
+
+@property (weak, nonatomic) IXNMuseManager *manager;
+@property (nonatomic) LoggingListener *loggingListener;
+@property (nonatomic) NSTimer *musePickerTimer;
 
 @end
 
@@ -17,6 +23,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [[NSUserDefaults standardUserDefaults] setObject:0 forKey:@"blinks"];
     return YES;
 }
 
@@ -36,6 +44,88 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    @synchronized (self.manager) {
+        // All variables and listeners are already wired up; return.
+        if (self.manager)
+            return;
+        self.manager = [IXNMuseManager sharedManager];
+    }
+    if (!self.muse) {
+        // Intent: show a bluetooth picker, but only if there isn't already a
+        // Muse connected to the device. Do this by delaying the picker by 1
+        // second. If startWithMuse happens before the timer expires, cancel
+        // the timer.
+        self.musePickerTimer =
+        [NSTimer scheduledTimerWithTimeInterval:1
+                                         target:self
+                                       selector:@selector(showPicker)
+                                       userInfo:nil
+                                        repeats:NO];
+    }
+    // to resume connection if we disconnected in applicationDidEnterBakcground::
+    // else if (self.muse.getConnectionState == IXNConnectionStateDisconnected)
+    //     [self.muse runAsynchronously];
+    if (!self.loggingListener)
+        self.loggingListener = [[LoggingListener alloc] initWithDelegate:self];
+    [self.manager addObserver:self
+                   forKeyPath:[self.manager connectedMusesKeyPath]
+                      options:(NSKeyValueObservingOptionNew |
+                               NSKeyValueObservingOptionInitial)
+                      context:nil];
+}
+
+- (void)showPicker {
+    [self.manager showMusePickerWithCompletion:^(NSError *e) {
+        if (e)
+            NSLog(@"Error showing Muse picker: %@", e);
+    }];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+    if ([keyPath isEqualToString:[self.manager connectedMusesKeyPath]]) {
+        NSSet *connectedMuses = [change objectForKey:NSKeyValueChangeNewKey];
+        if (connectedMuses.count) {
+            [self startWithMuse:[connectedMuses anyObject]];
+        }
+    }
+}
+
+- (void)startWithMuse:(id<IXNMuse>)muse {
+    // Uncomment to test Muse File Reader
+    //    [self playMuseFile];
+    @synchronized (self.muse) {
+        if (self.muse) {
+            return;
+        }
+        self.muse = muse;
+    }
+    [self.musePickerTimer invalidate];
+    self.musePickerTimer = nil;
+    [self.muse registerDataListener:self.loggingListener
+                               type:IXNMuseDataPacketTypeArtifacts];
+    [self.muse registerDataListener:self.loggingListener
+                               type:IXNMuseDataPacketTypeBattery];
+    [self.muse registerDataListener:self.loggingListener
+                               type:IXNMuseDataPacketTypeAccelerometer];
+    [self.muse registerConnectionListener:self.loggingListener];
+    [self.muse runAsynchronously];
+}
+
+// This gets called by LoggingListener
+- (void)sayHi {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Muse says hi"
+                                                    message:@"Muse is now connected"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+- (void)reconnectToMuse {
+    [self.muse runAsynchronously];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
