@@ -16,6 +16,7 @@
 		0AA17E4A1BDBC46C0066B4EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA17E481BDBC46C0066B4EE /* LaunchScreen.storyboard */; };
 		0AA17E551BDBC46C0066B4EE /* HackChairTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17E541BDBC46C0066B4EE /* HackChairTests.m */; };
 		0AA17E601BDBC46C0066B4EE /* HackChairUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17E5F1BDBC46C0066B4EE /* HackChairUITests.m */; };
+		0AD4A12E1BDC008100467F3A /* LoggingListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD4A12D1BDC008100467F3A /* LoggingListener.m */; settings = {ASSET_TAGS = (); }; };
 		E18C6FE6F368D8DD3AAE7CB9 /* libPods-HackChair.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A4625699125AC2C121D740 /* libPods-HackChair.a */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,8 @@
 		0AD4A1281BDBFC0500467F3A /* IXNNotchFrequency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNNotchFrequency.h; sourceTree = "<group>"; };
 		0AD4A1291BDBFC0500467F3A /* IXNSenderInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IXNSenderInformation.h; sourceTree = "<group>"; };
 		0AD4A12A1BDBFC0500467F3A /* Muse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Muse.h; sourceTree = "<group>"; };
+		0AD4A12C1BDC008100467F3A /* LoggingListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggingListener.h; sourceTree = "<group>"; };
+		0AD4A12D1BDC008100467F3A /* LoggingListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggingListener.m; sourceTree = "<group>"; };
 		1E5513238FE5EE058340A4A1 /* Pods-HackChair.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackChair.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackChair/Pods-HackChair.release.xcconfig"; sourceTree = "<group>"; };
 		3AB2395E693496E3BF5827E9 /* Pods-HackChair.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackChair.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackChair/Pods-HackChair.debug.xcconfig"; sourceTree = "<group>"; };
 		40A4625699125AC2C121D740 /* libPods-HackChair.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HackChair.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +149,8 @@
 				0AA17E3E1BDBC46C0066B4EE /* AppDelegate.m */,
 				0AA17E401BDBC46C0066B4EE /* ViewController.h */,
 				0AA17E411BDBC46C0066B4EE /* ViewController.m */,
+				0AD4A12C1BDC008100467F3A /* LoggingListener.h */,
+				0AD4A12D1BDC008100467F3A /* LoggingListener.m */,
 				0A97CAAF1BDBF37F00491E19 /* libMuse.a */,
 				0AA17E431BDBC46C0066B4EE /* Main.storyboard */,
 				0AD4A10B1BDBFC0500467F3A /* Muse */,
@@ -404,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AA17E421BDBC46C0066B4EE /* ViewController.m in Sources */,
+				0AD4A12E1BDC008100467F3A /* LoggingListener.m in Sources */,
 				0AA17E3F1BDBC46C0066B4EE /* AppDelegate.m in Sources */,
 				0AA17E3C1BDBC46C0066B4EE /* main.m in Sources */,
 			);
