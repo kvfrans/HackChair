@@ -1,0 +1,349 @@
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+<script>
+
+
+
+var search = "";
+var forums = {};
+
+
+$.ajax({
+        url: 'https://prod-mmx-001.magnet.com:5221/mmxmgmt/api/v1/topics/life/items?size=100&dateSince=2015-02-17T15%3A16%3A14-05%3A00',
+        // dataType: "jsonp",
+        cache: false,
+        beforeSend: function(xhr) {
+             xhr.setRequestHeader("X-mmx-app-id", "hseifkoahet");
+             xhr.setRequestHeader("X-mmx-api-key", "b472c6fb-d479-4487-840a-cca4fe5c07d0");
+             // xhr.setRequestHeader("Content-Type", "application/json");
+        }, success: function(data){
+          forums = data;
+        	console.log(data);
+            reloadTable();
+        }
+})
+
+function reloadTable()
+{
+  var table = document.getElementById("maintable");
+  table.innerHTML = "";
+  for(var i = 0; i < forums.items.length; i++)
+  {
+    var item = forums.items[i];
+    if(item.meta.tags.indexOf(search) >= 0 || search == "")
+    {
+      console.log(item.payload);
+      var table = document.getElementById("maintable");
+      var row = table.insertRow(0);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(0);
+      cell1.innerHTML = item.meta.tags.replace(/,/g , " ");
+      // cell1.innerHTML = "asd<br>asdas";
+      var image = new Image();
+      image.src = 'data:image/png;base64,'+item.meta.photo;
+      image.style.height = '125';
+      image.style.width = '222';
+      image.addEventListener('click',
+        function(e) {
+          setHighlight(this.src);
+        }, false);
+      cell2.appendChild(image);
+    }
+  }
+}
+
+function setHighlight(src)
+{
+  // alert(src);
+  $("#highlight").attr("src",src);
+}
+
+function runScript(e) {
+    if (e.keyCode == 13) {
+        search = $("#searchbar").val()
+        reloadTable()
+        return false;
+    }
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTMl>
+
+
+<html lang="en">
+    <head>
+
+        <title>Calhacks derp thing</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+<style>
+.onoffswitch {
+    position: relative; width: 90px;
+    margin-left: 20px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "On";
+    padding-left: 10px;
+    background-color: #FFFFFF; color: #000000;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+.span {
+    height: 640px !important;
+    /*width: 50%;*/
+    /*overflow: scroll;*/
+    overflow-x:hidden;
+}
+
+#container1{
+    height: 30px;
+    margin-left: 20px;
+    /*overflow: hidden;*/
+}
+
+body{
+  margin-top: 100px;
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#container2{
+    height: 100%;
+
+    /*overflow: auto;*/
+    padding-right: 15px;
+}
+
+html, body{
+    height: 100%;
+
+    /*overflow:hidden;*/
+}
+.navbar-header{
+  margin-left:5px;
+  width:81%;
+  background-color: transparent;
+}
+.navbar-fixed-top{
+  height: 50px;
+}
+.margin{
+  position: absolute;
+  right: 40px;
+
+}
+.margin2{
+  position:absolute;
+  right:40px;
+  top:240px;
+}
+
+
+</style>
+</head>
+
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Calhacks</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#" class="pull-right">Favorites<span class="sr-only">(current)</span></a></li>
+          <li><a href="#" class="pull-right">Stats</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" class="pull-right">Settings</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</nav>
+<table>
+
+  <tbody>
+
+  <tr>
+    
+
+      <h4>Toggle with your google street car here. Customize it to fit your needs and your <br> necessities. Share with friends and family. Make it public. It's all your choice.<br>  </h4>
+</tr>
+ 
+    
+  </tr>
+  <tr>
+  <td>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Photo Stream
+    </td>
+    <td>
+    <div class="onoffswitch" class="row">
+      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="onoffswitch-label" for="myonoffswitch">
+          <span class="onoffswitch-inner"></span>
+          <span class="onoffswitch-switch"></span>
+        </label>
+    </div>
+    </td>
+<tr>
+    <td>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Front Camera
+    </td>
+    
+    <td>
+     <div class="onoffswitch" class="row">
+      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="onoffswitch-label" for="myonoffswitch">
+          <span class="onoffswitch-inner"></span>
+          <span class="onoffswitch-switch"></span>
+        </label>
+    </div>
+    </td>
+    </tr>
+  <tr>
+    <td>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Share
+    </td>
+    <td>
+     <div class="onoffswitch" class="row">
+      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="onoffswitch-label" for="myonoffswitch">
+          <span class="onoffswitch-inner"></span>
+          <span class="onoffswitch-switch"></span>
+        </label>
+    </div>
+</td>
+</tr>
+<tr>
+    <td>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GPS Recognition
+    </td>
+    <td>
+     <div class="onoffswitch" class="row">
+      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="onoffswitch-label" for="myonoffswitch">
+          <span class="onoffswitch-inner"></span>
+          <span class="onoffswitch-switch"></span>
+        </label>
+    </div>
+</td>
+</tr>
+<tr>
+    <td>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Object Recognition
+    </td>
+    <td>
+     <div class="onoffswitch" class="row">
+      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+        <label class="onoffswitch-label" for="myonoffswitch">
+          <span class="onoffswitch-inner"></span>
+          <span class="onoffswitch-switch"></span>
+        </label>
+    </div>
+</td>
+</tr>
+<tr>
+<td class="margin2">
+      <img src="googlecar.jpg" height="375">
+  </td>
+</tr>
+
+  </tbody>
+</table>
+
+
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+</body>
+</html>
