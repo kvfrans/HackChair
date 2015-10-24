@@ -77,9 +77,9 @@
             [self vibrate];
         }
     }
+    [[[[Firebase alloc] initWithUrl:@"https://hackchair.firebaseio.com"] childByAppendingPath:@"blinks"] setValue:[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] forKey:@"blinks"];
     
     [[NSUserDefaults standardUserDefaults] setObject:0 forKey:@"blinks"];
-    
     
     AVCaptureConnection *videoConnection = nil;
     for (AVCaptureConnection *connection in stillImageOutput.connections)
@@ -106,9 +106,8 @@
         }
         else
         {
-         NSLog(@"no attachments");
+            NSLog(@"no attachments");
         }
-
         NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
         UIImage *image = [[UIImage alloc] initWithData:imageData];
          Firebase *myRootRef = [[[Firebase alloc] initWithUrl:@"https://hackchair.firebaseio.com"] childByAppendingPath:@"sitting"];
