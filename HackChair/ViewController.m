@@ -11,7 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Firebase/Firebase.h>
 #import <ImageIO/CGImageProperties.h>
-#import "Muse.h"
+#import "Muse/Muse.h"
 
 #define _width self.view.frame.size.width
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
@@ -208,7 +208,7 @@ BOOL isDarkImage(UIImage* inputImage){
         
         //luminance calculation gives more weight to r and b for human eyes
         float luminance = (0.299*r + 0.587*g + 0.114*b);
-        if (luminance<150) darkPixels ++;
+        if (luminance<50) darkPixels ++;
     }
     
     if (darkPixels >= darkPixelThreshold)
