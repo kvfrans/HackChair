@@ -12,4 +12,3 @@ end
 target 'HackChairUITests' do
 
 end
-

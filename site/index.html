@@ -8,18 +8,18 @@
         <title>HackingEdu</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script src="dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+  <script src="jQueryRotate.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+  <script src="bootbox.min.js"></script>
+  <script src="main.js"></script>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
-<script>
-$(document).ready(function(){
-  $("#extension").click(function(){
-    $("#activate").slideToggle("slow");
-  });
-});
-</script>
-
 <style>
 
 
@@ -33,14 +33,15 @@ body{
 #header {
     background-color:#C963E8;
     text-align:center;
-    padding:4px;
+    padding:1px;
 }
 
 #section {
   float left;
   position:absolute;
   margin-left: 2%;
-  height:;
+  height:700px;
+  margin-top:1%;
 }
 
 #extension{
@@ -49,9 +50,6 @@ body{
   display: none;
 }
 
-p#section{
-  height:100%;
-}
 
 #text{
   float left;
@@ -63,7 +61,26 @@ p#section{
 #section2{
   background-color: #FB6AFF;
   width:100%;
-  height:18%;
+  height:33%;
+  position:absolute;
+  margin-left:50%;
+}
+
+#section3{
+  background-color: #FF0DFF;
+  width:100%;
+  height:33%;
+  position:absolute;
+  margin-left:50%;
+  margin-top:15%;
+}
+#section4{
+  background-color:#FF72FD;
+  width:100%;
+  height:33%;
+  position:absolute;
+  margin-left:50%;
+  margin-top:30%;
 }
 
 #image{
@@ -79,26 +96,42 @@ p#section{
 <div id="main">
     <div id="header" align="center">
           <h1>
-            HackingEdu
+            H A C K  C H A I R
           </h1>
         <br/>
-        
+
     </div>
 
-<div id="section">
-  <h2>
-    Muse data name
-  </h2>
-  <p>Muse data</p>
-  <button id="activate">free memes from communist poland</button></div>
-<div id="extension">o hai dere</div>
 </div>
-<div id="section2">
-  <h2 id="text">
-    Chair Angle<br>
-  </h2>
+<div id="section">
+  <!-- <h2 id="text">
+    Chair<br>
+  </h2> -->
   <img src="chair.png" id="image">
 </div>
+<div id="section2">
+  <h2>
+    &nbsp;&nbsp;Chair Degree
+  </h2>
+  <h4>
+  &nbsp;&nbsp;&nbsp;&nbsp;<span id="degree">Muse data</span>
+  </h4>
+</div>
+<div id="section3">
+  <h2>
+    &nbsp;&nbsp;Number of Blinks
+  </h2>
+  <h4>
+  &nbsp;&nbsp;&nbsp;&nbsp;<span id="blinks">more muse data</span>
+  </h4>
+  </div>
+<div id="section4">
+  <h2>
+    &nbsp;&nbsp;Sitting?
+  </h2>
+  <h4>
+  &nbsp;&nbsp;&nbsp;&nbsp;<span id="sitting">even more dataaa</span>
+  </h4>
 </body>
 
 

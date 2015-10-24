@@ -68,18 +68,21 @@
     
     
 //    [[NSUserDefaults standardUserDefaults] setInteger:[[NSUserDefaults standardUserDefaults] integerForKey:@"snap"]+1 forKey:@"snap"];
-    NSLog(@"%d",[[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] intValue]);
+    
+    int blinknumber = [[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] intValue];
+    
+    NSLog(@"%d",blinknumber);
     
     if(angle > 15)
     {
-        if([[[NSUserDefaults standardUserDefaults] objectForKey:@"blinks"] intValue])
+        if(blinknumber >= 2)
         {
             [self vibrate];
         }
     }
+    [[[[Firebase alloc] initWithUrl:@"https://hackchair.firebaseio.com"] childByAppendingPath:@"blinks"] setValue:[NSNumber numberWithInt:blinknumber]];
     
     [[NSUserDefaults standardUserDefaults] setObject:0 forKey:@"blinks"];
-    
     
     AVCaptureConnection *videoConnection = nil;
     for (AVCaptureConnection *connection in stillImageOutput.connections)
@@ -106,9 +109,8 @@
         }
         else
         {
-         NSLog(@"no attachments");
+            NSLog(@"no attachments");
         }
-
         NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
         UIImage *image = [[UIImage alloc] initWithData:imageData];
          Firebase *myRootRef = [[[Firebase alloc] initWithUrl:@"https://hackchair.firebaseio.com"] childByAppendingPath:@"sitting"];
