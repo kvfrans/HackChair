@@ -11,6 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Firebase/Firebase.h>
 #import <ImageIO/CGImageProperties.h>
+#import "Muse.h"
 
 #define _width self.view.frame.size.width
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
@@ -106,11 +107,7 @@
             [myRootRef setValue:[NSNumber numberWithBool:false]];
         }
 
-         }];
-         
-         
-         
-//     }];
+    }];
 }
 
 - (void)viewDidLoad {
@@ -141,7 +138,7 @@
              {
                  float degs = RADIANS_TO_DEGREES(gyroData.rotationRate.y) / 10;
                  degs = degs - 0.4;
-                 if(degs > 1 || degs < -1)
+                 if(degs > 0.2 || degs < -0.2)
                  {
                      yTotal = yTotal + degs;
                  }
@@ -201,7 +198,7 @@ BOOL isDarkImage(UIImage* inputImage){
     int darkPixels = 0;
     
     int length = CFDataGetLength(imageData);
-    int const darkPixelThreshold = (inputImage.size.width*inputImage.size.height)*.45;
+    int const darkPixelThreshold = (inputImage.size.width*inputImage.size.height)*.75;
     
     for(int i=0; i<length; i+=4)
     {

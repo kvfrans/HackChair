@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A97CAB01BDBF37F00491E19 /* libMuse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A97CAAF1BDBF37F00491E19 /* libMuse.a */; settings = {ASSET_TAGS = (); }; };
 		0AA17E3C1BDBC46C0066B4EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17E3B1BDBC46C0066B4EE /* main.m */; };
 		0AA17E3F1BDBC46C0066B4EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17E3E1BDBC46C0066B4EE /* AppDelegate.m */; };
 		0AA17E421BDBC46C0066B4EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA17E411BDBC46C0066B4EE /* ViewController.m */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A97CAAF1BDBF37F00491E19 /* libMuse.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMuse.a; sourceTree = "<group>"; };
 		0AA17E371BDBC46C0066B4EE /* HackChair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackChair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA17E3B1BDBC46C0066B4EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0AA17E3D1BDBC46C0066B4EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E18C6FE6F368D8DD3AAE7CB9 /* libPods-HackChair.a in Frameworks */,
+				0A97CAB01BDBF37F00491E19 /* libMuse.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +115,7 @@
 				0AA17E3E1BDBC46C0066B4EE /* AppDelegate.m */,
 				0AA17E401BDBC46C0066B4EE /* ViewController.h */,
 				0AA17E411BDBC46C0066B4EE /* ViewController.m */,
+				0A97CAAF1BDBF37F00491E19 /* libMuse.a */,
 				0AA17E431BDBC46C0066B4EE /* Main.storyboard */,
 				0AA17E461BDBC46C0066B4EE /* Assets.xcassets */,
 				0AA17E481BDBC46C0066B4EE /* LaunchScreen.storyboard */,
@@ -474,6 +478,10 @@
 				INFOPLIST_FILE = HackChair/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HackChair",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kevinfrans.HackChair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -487,6 +495,10 @@
 				INFOPLIST_FILE = HackChair/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HackChair",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kevinfrans.HackChair;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
