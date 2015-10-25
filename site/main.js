@@ -1,3 +1,71 @@
+var time = new Date().getTime()
+var data2 = '{"client_id":"u5vHzE9yBqw", "client_secret":"s8aOW4vlM4Q" ,"grant_type":"http://www.moxtra.com/auth_uniqueid" ,"uniqueid" :"kev4",  "timestamp":"'+ time +'"}';
+console.log(data2);
+var data1 = JSON.parse(data2);
+console.log(time);
+$.ajax({
+    type: 'POST',
+    url:  "https://apisandbox.moxtra.com/oauth/token",
+    data: data1,
+    contentType: "application/x-www-form-urlencoded",
+    success: function(json) {
+        console.log(json);
+
+
+        var options = {
+                mode: "sandbox", //for production environment change to "production"
+                client_id: "u5vHzE9yBqw",
+                access_token: json.access_token, //valid access token from user authentication
+                invalid_token: function(event) {
+                    alert("Access Token expired for session id: " + event.session_id);
+                }
+            };
+
+            Moxtra.init(options);
+
+            console.log("made it");
+
+
+
+    var options = {
+        iframe: true,
+        extension: { "show_dialogs": { "meet_invite": true } },
+        tagid4iframe: "kevinfrans",
+        iframewidth: "1000px",
+        iframeheight: "750px",
+        video: true,
+        start_meet: function(event) {
+            alert("session key: " + event.session_key + " session id: " + event.session_id + " binder id: " + event.binder_id);
+        },
+        error: function(event) {
+            alert("error code: " + event.error_code + " message: " + event.error_message);
+        },
+        resume_meet: function(event) {
+            alert("session key: " + event.session_key + " session id: " + event.session_id + " binder id: " + event.binder_id);
+        },
+        end_meet: function(event) {
+            alert("Meet end event");
+        }
+    };
+    Moxtra.meet(options);
+
+
+
+    },
+    error: function(e) {
+        console.log(e)
+        // alert("Failure"+ JSON.stringify(e));
+
+    }
+});
+
+
+
+
+
+
+
+
 var myFirebaseRef = new Firebase("https://hackchair.firebaseio.com/");
 
 var leaning;
@@ -21,7 +89,7 @@ myFirebaseRef.child("lean").on("value", function(snapshot) {
 		  		closeOnConfirm: false
 			  	}, function(){
 			  		var urlthing = "249-05-0250";
-			  		var rand = math.random();
+			  		var rand = Math.random();
 			  		if(rand < 0.2)
 			  		{
 			  			urlthing = "249-08-1152";
@@ -77,6 +145,32 @@ myFirebaseRef.child("sitting").on("value", function(snapshot) {
 	}
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // console.print("asd")
