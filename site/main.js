@@ -37,7 +37,7 @@ $.ajax({
         }
       },
       tagid4iframe: "container",
-      iframewidth: (window.innerWidth / (10 / 4)) + "px",
+      iframewidth: (window.innerWidth / 2) + "px",
       iframeheight: (window.innerHeight - 81) + "px",
       video: true,
       start_meet: function(event) {
