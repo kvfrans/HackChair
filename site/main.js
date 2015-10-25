@@ -31,8 +31,8 @@ $.ajax({
         iframe: true,
         extension: { "show_dialogs": { "meet_invite": true } },
         tagid4iframe: "container",
-        iframewidth: "1000px",
-        iframeheight: "750px",
+        iframewidth: (window.innerWidth/2)+"px",
+        iframeheight: (window.innerHeight - 81)+"px",
         video: true,
         start_meet: function(event) {
             alert("session key: " + event.session_key + " session id: " + event.session_id + " binder id: " + event.binder_id);
@@ -48,6 +48,8 @@ $.ajax({
         }
     };
     Moxtra.meet(options);
+
+    $('iframe', parent.document).css("margin-top","81px");
 
 
 
