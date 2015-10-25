@@ -26,6 +26,7 @@
     UILabel* label;
     int count;
     float angle;
+    __block float yTotal = 0;
 }
 
 @end
@@ -126,15 +127,26 @@
     }];
 }
 
+
+-(void) doDoubleTap
+{
+    yTotal = 0;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doDoubleTap)];
+    doubleTap.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer:doubleTap];
     
     Firebase *myRootRef = [[[Firebase alloc] initWithUrl:@"https://hackchair.firebaseio.com"] childByAppendingPath:@"lean"];
     // Write data to Firebase
     [myRootRef setValue:0];
     
 //    gyro
-    __block float yTotal = 0;
+    yTotal = 0;
     UILabel* yLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, _width, 50)];
     [self.view addSubview:yLabel];
     yLabel.textAlignment = NSTextAlignmentCenter;
