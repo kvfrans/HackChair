@@ -19,6 +19,7 @@ h2 {
   text-align:center;
   padding:1px;
   padding-bottom: 10px;
+  padding-top: 10px;
   width:100%;
   position:absolute;
 }
@@ -27,7 +28,7 @@ h2 {
   /*position:absolute;*/
   margin-left: 70%;
   height:100%;
-  margin-top: 25%;
+  margin-top: 26%;
   position: absolute;
 }
 
@@ -50,7 +51,7 @@ h2 {
   height:30%;
   position:absolute;
   margin-left:50%;
-  margin-top:74px;
+  margin-top:84px;
   display: table;
   overflow: hidden;
 }

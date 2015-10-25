@@ -129,7 +129,7 @@ myFirebaseRef.child("lean").on("value", function(snapshot) {
 
 myFirebaseRef.child("blinks").on("value", function(snapshot) {
   console.log(snapshot.val());
-  $("#blinks").html(snapshot.val());
+  $("#blinks .big-text").html(snapshot.val());
   blinks = blinks + snapshot.val();
   if (blinks >= 10) {
     swal({
@@ -144,9 +144,9 @@ myFirebaseRef.child("blinks").on("value", function(snapshot) {
 myFirebaseRef.child("sitting").on("value", function(snapshot) {
   console.log(snapshot.val());
   if (snapshot.val()) {
-    $("#sitting").html("Good");
+    $("#sitting .big-text").html("Good");
   } else {
-    $("#sitting").html("Bad");
+    $("#sitting .big-text").html("Bad");
   }
 
 });
