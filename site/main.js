@@ -23,14 +23,14 @@ $.ajax({
 
             Moxtra.init(options);
 
-            console.log("made it");
+            console.log()
 
 
 
     var options = {
         iframe: true,
         extension: { "show_dialogs": { "meet_invite": true } },
-        tagid4iframe: "kevinfrans",
+        tagid4iframe: "container",
         iframewidth: "1000px",
         iframeheight: "750px",
         video: true,
