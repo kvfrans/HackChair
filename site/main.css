@@ -7,6 +7,7 @@ body {
 h2 {
   font-size:70px;
 }
+
 .vcenter {
     display: inline-block;
     vertical-align: middle;
@@ -24,11 +25,10 @@ h2 {
 
 #section {
   /*position:absolute;*/
-  margin-left: 80%;
-  height:50%;
-  margin-top: 35%;
+  margin-left: 70%;
+  height:100%;
+  margin-top: 25%;
   position: absolute;
-  width:50%;
 }
 
 #extension {
@@ -36,7 +36,6 @@ h2 {
   background-color: #FF75E3;
   display: none;
 }
-
 
 #text {
   float left;
@@ -48,41 +47,61 @@ h2 {
 
 #section2 {
   width:100%;
-  height:15%;
+  height:30%;
   position:absolute;
-  margin-left:75%;
-  margin-top:6%;
+  margin-left:50%;
+  margin-top:74px;
   display: table;
   overflow: hidden;
 }
 
-#section3 {
-  width:100%;
-  height:15%;
-  position:absolute;
-  margin-left:75%;
-  margin-top:14%;
-  display: table;
-  overflow: hidden;
+.box-with-text {
+  position: relative;
+  top: 0;
 }
 
-#section4 {
-  width:100%;
-  height:15%;
-  position:absolute;
-  margin-left:75%;
-  margin-top:21.95% ;
-  display: table;
-  overflow: hidden;
+.text {
+  margin-top: -13px;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
 }
 
 #image {
-  height: 60%;
-  width: 25%;
+  height: 40%;
+  width: 40%;
   text-align: center;
 }
 
 .center-text {
   display: table-cell;
   vertical-align: middle;
+}
+
+.centering-container {
+  position: relative;
+}
+
+.centering-container .v-centered {
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+}
+
+.number-with-units .big-text {
+  font-size: 3em;
+  display: block;
+  width: 100%;
+}
+
+.number-with-units .description {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
 }
