@@ -8,10 +8,10 @@
         <title>HackingEdu</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
 
     <script src="dist/sweetalert.min.js"></script>
     <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
@@ -26,22 +26,26 @@
 
 body{
   overflow:hidden;
-	background-color: #FF75E3
-
+  background-color: rgb(238, 238, 238);
+  font-family: 'Roboto-Light', sans-serif;
+}
+h2{
+  font-size:70px;
 }
 
 #header {
-    background-color:#C963E8;
+    background-color: rgb(245, 91, 115);
     text-align:center;
     padding:1px;
+
 }
 
 #section {
-  float left;
-  position:absolute;
-  margin-left: 2%;
-  height:700px;
-  margin-top:1%;
+  /*position:absolute;*/
+  margin-left: 14%;
+  height:100%;
+  margin-top: 8%;
+  position: absolute;
 }
 
 #extension{
@@ -58,8 +62,9 @@ body{
   margin-left: 2%;
   margin-top: 10%;
 }
+
 #section2{
-  background-color: #FB6AFF;
+  background-color: rgb(62, 70, 74);
   width:100%;
   height:33%;
   position:absolute;
@@ -67,7 +72,7 @@ body{
 }
 
 #section3{
-  background-color: #FF0DFF;
+  background-color: rgb(50, 57, 61);
   width:100%;
   height:33%;
   position:absolute;
@@ -75,7 +80,7 @@ body{
   margin-top:15%;
 }
 #section4{
-  background-color:#FF72FD;
+  background-color: rgb(47, 51, 54);
   width:100%;
   height:33%;
   position:absolute;
@@ -83,16 +88,17 @@ body{
   margin-top:30%;
 }
 
-#image{
-  position: relative;
-  height:80%;
-  margin-top: 20%;
+#image {
+  height: 60%;
+  width: 25%;
+  text-align: center;
 }
 </style>
 </head>
 
 
 <body>
+<font color="white">
 <div id="main">
     <div id="header" align="center">
           <h1>
@@ -110,30 +116,30 @@ body{
   <img src="chair.png" id="image">
 </div>
 <div id="section2">
-  <h2>
+<!--   <h2>
     &nbsp;&nbsp;Chair Degree
-  </h2>
-  <h4>
+  </h2> -->
+  <h2>
   &nbsp;&nbsp;&nbsp;&nbsp;<span id="degree">Muse data</span>
-  </h4>
+  </h2>
 </div>
 <div id="section3">
-  <h2>
+<!--   <h2>
     &nbsp;&nbsp;Number of Blinks
-  </h2>
-  <h4>
+  </h2> -->
+  <h2>
   &nbsp;&nbsp;&nbsp;&nbsp;<span id="blinks">more muse data</span>
-  </h4>
+  </h2>
   </div>
 <div id="section4">
+<!--   <h2>
+    &nbsp;&nbsp;Posture?
+  </h2> -->
   <h2>
-    &nbsp;&nbsp;Sitting?
-  </h2>
-  <h4>
   &nbsp;&nbsp;&nbsp;&nbsp;<span id="sitting">even more dataaa</span>
-  </h4>
+  </h2>
 </body>
-
+</font>
 
 
 </html>

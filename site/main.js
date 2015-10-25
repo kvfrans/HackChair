@@ -1,35 +1,41 @@
 var myFirebaseRef = new Firebase("https://hackchair.firebaseio.com/");
 
 var leaning;
-var blinks;
+var blinks = 0;
+// var blinkCo
 
 myFirebaseRef.child("lean").on("value", function(snapshot) {
-  $("#image").rotate(snapshot.val());
-  $("#degree").html(snapshot.val());
-  if(snapshot.val() > 15)
-  {
-  	if(blinks >= 2)
-  	{
-  		swal({   title: "Sleeping!",   text: "stop sleeping dude its class",   type: "error",   confirmButtonText: "ok fine" });
-  	}
-  }
+	if(snapshot.val() != null)
+	{
+		$("#image").rotate(snapshot.val()*-1);
+		  $("#degree").html( (Math.round(snapshot.val() * 100) / 100) + " deg");
+		  if(snapshot.val() > 15)
+		  {
+
+		  }
+	}
+
 });
 
 myFirebaseRef.child("blinks").on("value", function(snapshot) {
 	console.log(snapshot.val());
-  $("#blinks").html(snapshot.val());
-  blinks = snapshot.val();
+	$("#blinks").html(snapshot.val() + " blinks");
+	blinks = blinks + snapshot.val();
+	if(blinks >= 10)
+	{
+		swal({   title: "Sleeping!",   text: "stop sleeping dude its class",   type: "error",   confirmButtonText: "ok fine" });
+	}
 });
 
 myFirebaseRef.child("sitting").on("value", function(snapshot) {
 	console.log(snapshot.val());
 	if(snapshot.val())
 	{
-		$("#sitting").html("Someone is in this chair");
+		$("#sitting").html("Good Posture");
 	}
 	else
 	{
-		$("#sitting").html("no one is in the chair :(");
+		$("#sitting").html("Bad Posture");
 	}
 
 });
