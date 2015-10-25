@@ -19,9 +19,9 @@ h2 {
 
 #section {
   /*position:absolute;*/
-  margin-left: 14%;
+  margin-left: 70%;
   height:100%;
-  margin-top: 8%;
+  margin-top: 25%;
   position: absolute;
 }
 
@@ -64,8 +64,8 @@ h2 {
 }
 
 #image {
-  height: 60%;
-  width: 25%;
+  height: 40%;
+  width: 40%;
   text-align: center;
 }
 
