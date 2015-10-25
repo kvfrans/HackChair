@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D3A63A89-3760-46E0-AC52-B0A35AAF2267</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MXMeetSample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>10d58d09-c433-489a-9405-e79e5ce0c7d9++8668</key>
+		<string>https://svn.grouphour.com/svnrepos/moxtra.sdk1.2.3</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MoxtraMeetSDK/Products/Samples/MXMeetSample/MXMeetSample.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>10d58d09-c433-489a-9405-e79e5ce0c7d9++8668</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>10d58d09-c433-489a-9405-e79e5ce0c7d9++8668</key>
+		<string>https://svn.grouphour.com/svnrepos</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://svn.grouphour.com/svnrepos/moxtra.sdk1.2.3/MoxtraMeetSDK/Products/Samples/MXMeetSample/MXMeetSample.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>10d58d09-c433-489a-9405-e79e5ce0c7d9++8668</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>10d58d09-c433-489a-9405-e79e5ce0c7d9++8668</string>
+			<key>IDESourceControlWCCName</key>
+			<string>moxtra.sdk1.2.3</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,361 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F30AD7231974CAF800F3AF74 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F30AD71F1974CAF800F3AF74 /* libc++.dylib */; };
+		F30AD7241974CAF800F3AF74 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F30AD7201974CAF800F3AF74 /* libstdc++.6.dylib */; };
+		F30AD7251974CAF800F3AF74 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F30AD7211974CAF800F3AF74 /* libxml2.2.dylib */; };
+		F30AD7261974CAF800F3AF74 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F30AD7221974CAF800F3AF74 /* libz.dylib */; };
+		F3BB3E9919740DFE00B6EEF1 /* MoxtraSDK in Frameworks */ = {isa = PBXBuildFile; fileRef = F3BB3E9619740DFE00B6EEF1 /* MoxtraSDK */; };
+		F3BB3E9A19740DFE00B6EEF1 /* MoxtraSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F3BB3E9719740DFE00B6EEF1 /* MoxtraSDKResources.bundle */; };
+		F3E584BA196BCFB5003DD93B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3E584B8196BCFB5003DD93B /* InfoPlist.strings */; };
+		F3E584BC196BCFB5003DD93B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E584BB196BCFB5003DD93B /* main.m */; };
+		F3E584C0196BCFB5003DD93B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E584BF196BCFB5003DD93B /* AppDelegate.m */; };
+		F3E584C2196BCFB5003DD93B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3E584C1196BCFB5003DD93B /* Images.xcassets */; };
+		F3E584E0196BD0BF003DD93B /* MeetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E584DF196BD0BF003DD93B /* MeetViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F30AD71F1974CAF800F3AF74 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		F30AD7201974CAF800F3AF74 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
+		F30AD7211974CAF800F3AF74 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		F30AD7221974CAF800F3AF74 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F3BB3E9519740DFE00B6EEF1 /* Moxtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Moxtra.h; sourceTree = "<group>"; };
+		F3BB3E9619740DFE00B6EEF1 /* MoxtraSDK */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = MoxtraSDK; sourceTree = "<group>"; };
+		F3BB3E9719740DFE00B6EEF1 /* MoxtraSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MoxtraSDKResources.bundle; sourceTree = "<group>"; };
+		F3BB3E9819740DFE00B6EEF1 /* MXClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXClient.h; sourceTree = "<group>"; };
+		F3E584AC196BCFB5003DD93B /* MXMeetSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MXMeetSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3E584B7196BCFB5003DD93B /* MXMeetSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MXMeetSample-Info.plist"; sourceTree = "<group>"; };
+		F3E584B9196BCFB5003DD93B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F3E584BB196BCFB5003DD93B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F3E584BD196BCFB5003DD93B /* MXMeetSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MXMeetSample-Prefix.pch"; sourceTree = "<group>"; };
+		F3E584BE196BCFB5003DD93B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F3E584BF196BCFB5003DD93B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F3E584C1196BCFB5003DD93B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F3E584DE196BD0BF003DD93B /* MeetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetViewController.h; sourceTree = "<group>"; };
+		F3E584DF196BD0BF003DD93B /* MeetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3E584A9196BCFB5003DD93B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F30AD7241974CAF800F3AF74 /* libstdc++.6.dylib in Frameworks */,
+				F30AD7261974CAF800F3AF74 /* libz.dylib in Frameworks */,
+				F30AD7231974CAF800F3AF74 /* libc++.dylib in Frameworks */,
+				F3BB3E9919740DFE00B6EEF1 /* MoxtraSDK in Frameworks */,
+				F30AD7251974CAF800F3AF74 /* libxml2.2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3BB3E9419740DFE00B6EEF1 /* MoxtraSDK.sdk */ = {
+			isa = PBXGroup;
+			children = (
+				F3BB3E9519740DFE00B6EEF1 /* Moxtra.h */,
+				F3BB3E9819740DFE00B6EEF1 /* MXClient.h */,
+				F3BB3E9619740DFE00B6EEF1 /* MoxtraSDK */,
+				F3BB3E9719740DFE00B6EEF1 /* MoxtraSDKResources.bundle */,
+			);
+			name = MoxtraSDK.sdk;
+			path = ../../MoxtraSDK.sdk;
+			sourceTree = "<group>";
+		};
+		F3E584A3196BCFB5003DD93B = {
+			isa = PBXGroup;
+			children = (
+				F3BB3E9419740DFE00B6EEF1 /* MoxtraSDK.sdk */,
+				F3E584B5196BCFB5003DD93B /* MXMeetSample */,
+				F3E584AE196BCFB5003DD93B /* Frameworks */,
+				F3E584AD196BCFB5003DD93B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3E584AD196BCFB5003DD93B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3E584AC196BCFB5003DD93B /* MXMeetSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3E584AE196BCFB5003DD93B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F30AD71F1974CAF800F3AF74 /* libc++.dylib */,
+				F30AD7201974CAF800F3AF74 /* libstdc++.6.dylib */,
+				F30AD7211974CAF800F3AF74 /* libxml2.2.dylib */,
+				F30AD7221974CAF800F3AF74 /* libz.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3E584B5196BCFB5003DD93B /* MXMeetSample */ = {
+			isa = PBXGroup;
+			children = (
+				F3E584BE196BCFB5003DD93B /* AppDelegate.h */,
+				F3E584BF196BCFB5003DD93B /* AppDelegate.m */,
+				F3E584DE196BD0BF003DD93B /* MeetViewController.h */,
+				F3E584DF196BD0BF003DD93B /* MeetViewController.m */,
+				F3E584C1196BCFB5003DD93B /* Images.xcassets */,
+				F3E584B6196BCFB5003DD93B /* Supporting Files */,
+			);
+			path = MXMeetSample;
+			sourceTree = "<group>";
+		};
+		F3E584B6196BCFB5003DD93B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3E584B7196BCFB5003DD93B /* MXMeetSample-Info.plist */,
+				F3E584B8196BCFB5003DD93B /* InfoPlist.strings */,
+				F3E584BB196BCFB5003DD93B /* main.m */,
+				F3E584BD196BCFB5003DD93B /* MXMeetSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3E584AB196BCFB5003DD93B /* MXMeetSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3E584D8196BCFB5003DD93B /* Build configuration list for PBXNativeTarget "MXMeetSample" */;
+			buildPhases = (
+				F3E584A8196BCFB5003DD93B /* Sources */,
+				F3E584A9196BCFB5003DD93B /* Frameworks */,
+				F3E584AA196BCFB5003DD93B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MXMeetSample;
+			productName = MXMeetSample;
+			productReference = F3E584AC196BCFB5003DD93B /* MXMeetSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3E584A4196BCFB5003DD93B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Moxtra;
+				TargetAttributes = {
+					F3E584AB196BCFB5003DD93B = {
+						DevelopmentTeam = EHP752TB4K;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = F3E584A7196BCFB5003DD93B /* Build configuration list for PBXProject "MXMeetSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F3E584A3196BCFB5003DD93B;
+			productRefGroup = F3E584AD196BCFB5003DD93B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3E584AB196BCFB5003DD93B /* MXMeetSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3E584AA196BCFB5003DD93B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3E584BA196BCFB5003DD93B /* InfoPlist.strings in Resources */,
+				F3E584C2196BCFB5003DD93B /* Images.xcassets in Resources */,
+				F3BB3E9A19740DFE00B6EEF1 /* MoxtraSDKResources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3E584A8196BCFB5003DD93B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3E584E0196BD0BF003DD93B /* MeetViewController.m in Sources */,
+				F3E584C0196BCFB5003DD93B /* AppDelegate.m in Sources */,
+				F3E584BC196BCFB5003DD93B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F3E584B8196BCFB5003DD93B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3E584B9196BCFB5003DD93B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3E584D6196BCFB5003DD93B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3E584D7196BCFB5003DD93B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3E584D9196BCFB5003DD93B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MXMeetSample/MXMeetSample-Prefix.pch";
+				INFOPLIST_FILE = "MXMeetSample/MXMeetSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../MoxtraSDK.sdk",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F3E584DA196BCFB5003DD93B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MXMeetSample/MXMeetSample-Prefix.pch";
+				INFOPLIST_FILE = "MXMeetSample/MXMeetSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../MoxtraSDK.sdk",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3E584A7196BCFB5003DD93B /* Build configuration list for PBXProject "MXMeetSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3E584D6196BCFB5003DD93B /* Debug */,
+				F3E584D7196BCFB5003DD93B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3E584D8196BCFB5003DD93B /* Build configuration list for PBXNativeTarget "MXMeetSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3E584D9196BCFB5003DD93B /* Debug */,
+				F3E584DA196BCFB5003DD93B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3E584A4196BCFB5003DD93B /* Project object */;
+}

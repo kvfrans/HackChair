@@ -1,6 +1,6 @@
 var time = new Date().getTime()
 var data2 =
-  '{"client_id":"u5vHzE9yBqw", "client_secret":"s8aOW4vlM4Q" ,"grant_type":"http://www.moxtra.com/auth_uniqueid" ,"uniqueid" :"kev4",  "timestamp":"' +
+  '{"client_id":"u5vHzE9yBqw", "client_secret":"s8aOW4vlM4Q" ,"grant_type":"http://www.moxtra.com/auth_uniqueid" ,"uniqueid" :"kev5",  "timestamp":"' +
   time + '"}';
 console.log(data2);
 var data1 = JSON.parse(data2);
@@ -124,7 +124,6 @@ myFirebaseRef.child("lean").on("value", function(snapshot) {
       });
     }
   }
-
 });
 
 myFirebaseRef.child("blinks").on("value", function(snapshot) {

@@ -13,6 +13,7 @@
 #import <ImageIO/CGImageProperties.h>
 #import "Muse/Muse.h"
 #import <AudioToolbox/AudioServices.h>
+//#import "Moxtra.h"
 
 #define _width self.view.frame.size.width
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
@@ -26,7 +27,7 @@
     UILabel* label;
     int count;
     float angle;
-    __block float yTotal = 0;
+    __block float yTotal;
 }
 
 @end
@@ -127,9 +128,21 @@
     }];
 }
 
+-(void) moxtra
+{
+    
+//    [[Moxtra sharedClient] joinMeet:@"187831436" withUserName:@"kev3" withDelegate:nil inviteAttendeesBlock:nil success: ^(NSString *meetID) {
+//        NSLog(@"Join meet success with MeetID [%@]", meetID);
+//    } failure: ^(NSError *error) {
+//        NSLog(@"Join meet failed, %@", [NSString stringWithFormat:@"error code [%ld] description: [%@] info [%@]", (long)[error code], [error localizedDescription], [[error userInfo] description]]);
+//    }];
+    
+}
+
 
 -(void) doDoubleTap
 {
+    NSLog(@"ddd");
     yTotal = 0;
 }
 

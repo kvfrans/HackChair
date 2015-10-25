@@ -313,6 +313,7 @@
 				TargetAttributes = {
 					0AA17E361BDBC46C0066B4EE = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = EHP752TB4K;
 					};
 					0AA17E4F1BDBC46C0066B4EE = {
 						CreatedOnToolsVersion = 7.0;
@@ -567,9 +568,10 @@
 			baseConfigurationReference = 3AB2395E693496E3BF5827E9 /* Pods-HackChair.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HackChair/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -586,9 +588,10 @@
 			baseConfigurationReference = 1E5513238FE5EE058340A4A1 /* Pods-HackChair.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HackChair/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
