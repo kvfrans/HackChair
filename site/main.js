@@ -82,7 +82,7 @@ myFirebaseRef.child("lean").on("value", function(snapshot) {
   if (snapshot.val() != null) {
     $("#image").rotate(snapshot.val() * -1);
     $("#degree .big-text").html((Math.round(snapshot.val() * 100) / 100));
-    if (snapshot.val() > 8) {
+    if (snapshot.val() > 15) {
       swal({
         title: "Too much tilt",
         text: "You're leaning your chair back a lot! Try out a different chair model?",
@@ -130,7 +130,7 @@ myFirebaseRef.child("blinks").on("value", function(snapshot) {
   console.log(snapshot.val());
   $("#blinks .big-text").html(snapshot.val());
   blinks = blinks + snapshot.val();
-  if (blinks >= 10) {
+  if (snapshot.val() > 3) {
     swal({
       title: "Sleeping!",
       text: "stop sleeping dude its class",
