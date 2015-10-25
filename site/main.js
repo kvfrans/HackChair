@@ -31,7 +31,7 @@ $.ajax({
         iframe: true,
         extension: { "show_dialogs": { "meet_invite": true } },
         tagid4iframe: "container",
-        iframewidth: (window.innerWidth/2)+"px",
+        iframewidth: (window.innerWidth/(4/3))+"px",
         iframeheight: (window.innerHeight - 81)+"px",
         video: true,
         start_meet: function(event) {

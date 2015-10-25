@@ -7,6 +7,11 @@ body {
 h2 {
   font-size:70px;
 }
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
 
 #header {
   background-color: rgb(245, 91, 115);
@@ -19,10 +24,11 @@ h2 {
 
 #section {
   /*position:absolute;*/
-  margin-left: 14%;
-  height:100%;
-  margin-top: 8%;
+  margin-left: 80%;
+  height:50%;
+  margin-top: 35%;
   position: absolute;
+  width:50%;
 }
 
 #extension {
@@ -42,10 +48,10 @@ h2 {
 
 #section2 {
   width:100%;
-  height:30%;
+  height:15%;
   position:absolute;
-  margin-left:50%;
-  margin-top:80px;
+  margin-left:75%;
+  margin-top:6%;
   display: table;
   overflow: hidden;
 }
@@ -54,8 +60,8 @@ h2 {
   width:100%;
   height:15%;
   position:absolute;
-  margin-left:50%;
-  margin-top:16.5%;
+  margin-left:75%;
+  margin-top:14%;
   display: table;
   overflow: hidden;
 }
@@ -64,8 +70,8 @@ h2 {
   width:100%;
   height:15%;
   position:absolute;
-  margin-left:50%;
-  margin-top:26.5%;
+  margin-left:75%;
+  margin-top:21.95% ;
   display: table;
   overflow: hidden;
 }
