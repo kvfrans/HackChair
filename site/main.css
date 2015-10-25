@@ -8,6 +8,12 @@ h2 {
   font-size:70px;
 }
 
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
 #header {
   background-color: rgb(245, 91, 115);
   text-align:center;
@@ -72,4 +78,30 @@ h2 {
 .center-text {
   display: table-cell;
   vertical-align: middle;
+}
+
+.centering-container {
+  position: relative;
+}
+
+.centering-container .v-centered {
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
+}
+
+.number-with-units .big-text {
+  font-size: 3em;
+  display: block;
+  width: 100%;
+}
+
+.number-with-units .description {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
 }
