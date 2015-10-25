@@ -17,18 +17,24 @@ h2 {
 #header {
   background-color: rgb(245, 91, 115);
   text-align:center;
-  padding:1px;
+  /*padding:1px;
   padding-bottom: 10px;
-  padding-top: 10px;
+  padding-top: 10px;*/
+  padding: 0.25% 0;
   width:100%;
   position:absolute;
+  z-index: 2;
+}
+
+#title {
+  padding: 0.5% 0;
 }
 
 #section {
   /*position:absolute;*/
-  margin-left: 50%;
+  margin-left: 55%;
   height:100%;
-  margin-top: 27%;
+  margin-top: 25%;
   position: absolute;
 }
 
@@ -51,9 +57,11 @@ h2 {
   height:30%;
   position:absolute;
   margin-left:50%;
-  margin-top:84px;
+  /*margin-top:86px;*/
+  margin-top: 6%;
   display: table;
   overflow: hidden;
+  z-index: 1;
 }
 
 .box-with-text {
@@ -72,7 +80,7 @@ h2 {
 
 #image {
   height: 80%;
-  width: 70%;
+  width: 65%;
   text-align: center;
 }
 
@@ -105,4 +113,8 @@ h2 {
   text-transform: uppercase;
   display: block;
   width: 100%;
+}
+
+.move-left {
+  margin-left: -5%;
 }
