@@ -1,5 +1,5 @@
 var time = new Date().getTime()
-var data2 = '{"client_id":"u5vHzE9yBqw", "client_secret":"s8aOW4vlM4Q" ,"grant_type":"http://www.moxtra.com/auth_uniqueid" ,"uniqueid" :"kev4",  "timestamp":"'+ time +'"}';
+var data2 = '{"client_id":"u5vHzE9yBqw", "client_secret":"s8aOW4vlM4Q" ,"grant_type":"http://www.moxtra.com/auth_uniqueid" ,"uniqueid" :"kev5",  "timestamp":"'+ time +'"}';
 console.log(data2);
 var data1 = JSON.parse(data2);
 console.log(time);
@@ -79,7 +79,7 @@ myFirebaseRef.child("lean").on("value", function(snapshot) {
 	{
 		$("#image").rotate(snapshot.val()*-1);
 		  $("#degree").html( (Math.round(snapshot.val() * 100) / 100) + " deg");
-		  if(snapshot.val() > 8)
+		  if(snapshot.val() > 20)
 		  {
 		  	swal({
 		  		title: "Too much tilt",
@@ -129,7 +129,7 @@ myFirebaseRef.child("blinks").on("value", function(snapshot) {
 	console.log(snapshot.val());
 	$("#blinks").html(snapshot.val() + " blinks");
 	blinks = blinks + snapshot.val();
-	if(blinks >= 10)
+	if(snapshot.val() > 3)
 	{
 		swal({   title: "Sleeping!",   text: "stop sleeping dude its class",   type: "error",   confirmButtonText: "ok fine" });
 	}
